@@ -1,0 +1,52 @@
+/* index.css */
+:root {
+  /* Set color-scheme to let light-dark() know which value to parse */
+  color-scheme: light dark;
+
+  /* Theme variables: light-dark(light_color, dark_color) */
+  --bg-color: light-dark(#ffffff, #121212);
+  --text-color: light-dark(#1a1a1a, #eaeaea);
+  --accent-color: light-dark( #4752c4, #5865F2);
+
+  --card-bg: light-dark(#f2f3f5, #1e1f22);
+  --text-muted: light-dark(#4e5058, #b5bac1);
+  --danger-red: light-dark(#da373c, #fa777c);
+
+  --discord-blurple: #5865F2;
+  --discord-blurple-hover: #4752c4;
+  --discord-dark: light-dark(#e3e5e8, #1e1f22);
+  }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  background-color: var(--discord-blurple);
+  align-items: center;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center; /* Centers text horizontally */
+  gap: 12px;
+  color: #ffffff;
+}
+
+.btn:disabled {
+  background-color: #4f545c; /* Muted Discord grey */
+  color: #9fa3a9;            /* Faded text color */
+  cursor: not-allowed;       /* Changes pointer to a circle-slash */
+  opacity: 0.6;              /* Optional: adds extra visual fading */
+}
+
+.btn:hover {
+  background-color: var(--discord-blurple-hover);
+}
